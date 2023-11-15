@@ -28,11 +28,12 @@ export const Timer = ({ focusSubject, clearSubject, onTimerEnd }) => {
   //   setIsStarted(false)
   // };
 
-  const onEnd = (reset) => {
+  const onEnd = () => {
     Vibration.vibrate(PATTERN);
     setIsStarted(false);
     setProgress(1);
-    reset();
+    // reset();
+    console.log("onEnd is called")
     onTimerEnd(focusSubject);
   };
 
